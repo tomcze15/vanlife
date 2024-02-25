@@ -1,0 +1,7 @@
+*
+!app/public
+!app/src
+!app/index.html
+!app/package*.json
+!app/tsconfig*.json
+!app/vite.config.ts

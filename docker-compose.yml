@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  ui:
+    container_name: vite-react
+    env_file: .env
+    build:
+      dockerfile: .image/node/Dockerfile
+      context: .
+    ports:
+      - ${VITE_PORT}:${VITE_PORT}
+    volumes:
+      - ./app:/home/node/app
+      - node-modules-volume:/home/node/app/node_modules
+    restart: always
+volumes:
+  node-modules-volume:
